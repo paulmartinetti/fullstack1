@@ -1,0 +1,27 @@
+body {
+    background-color: white;
+    color: black;
+    /* this is the root font size in 'rem' in nav ul li below */
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* remove all padding, nav has own padding */
+    padding: 0px;
+    margin: 0px;
+}
+.nav {
+    background-color: cadetblue;
+    color: white;
+}
+.nav ul {
+    /* nav has own padding, want to remove it and the bullets */
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+.nav ul li {
+    /* want padding here */
+    padding: 16px;
+    text-align: center;
+    /* size relative to font size set in body */
+    font-size: 1.2rem;
+}

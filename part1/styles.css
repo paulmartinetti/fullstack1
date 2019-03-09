@@ -1,0 +1,54 @@
+h1 {
+    color:red;
+    background-color: blue;
+}
+body {
+    /* this value is considered the root size*/
+    font-size: 16px;
+}
+p {
+    /* this value relative to the root size*/
+    font-size: 2em;
+    /* the 2nd value is in case the desired font is not available */
+    /* font-family: Arial, Courier; */
+    font-family: 'Roboto Slab', serif;
+}
+#mainPar {
+    color:orange;
+}
+.keypoint{
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Srisakdi', cursive;
+    /* strike through is here as well*/
+    text-decoration: underline;
+}
+.veggie {
+    color: green;
+}
+.meat {
+    color: brown;
+}
+#box {
+    background-color: yellow;
+    /* width: 200px; actual width = width + padding + borders = 244*/
+    width: 30%;
+    height: 100px;
+    padding: 20px;
+    border: 2px solid black;
+    /* separation from other elements*/
+    margin:10px auto 10px auto;
+    text-align: center;
+    /* to use vertical align, you have to also specify line-height*/
+    vertical-align: middle;
+    line-height: 100px;
+}
+#box2 {
+    background-color: yellow;
+    /* width: 200px; actual width = width + padding + borders = 244*/
+    width: 30%;
+    height: 100px;
+    padding: 20px 10px 30px 40px;
+    border: 2px solid black;
+    margin-left: 20px;
+}
