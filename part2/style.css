@@ -1,0 +1,90 @@
+body {
+    background-color: white;
+    color: black;
+    /* this is the root font size in 'rem' in nav ul li below */
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* remove all padding, nav has own padding */
+    padding: 0px;
+    margin: 0px;
+}
+.nav {
+    background-color: black;
+    color: white;
+}
+.nav ul {
+    /* nav has own padding, want to remove it and the bullets */
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    /* hack for @media > 700px below */
+    font-size: 0px;
+}
+.nav ul li {
+    /* want padding here */
+    padding: 16px;
+    text-align: center;
+    /* size relative to font size set in body */
+    font-size: 1.2rem;
+    border-bottom: 1px solid white;
+    transition: background-color 0.5s;
+}
+.nav ul li:hover {
+    /* want padding here */
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.image-area {
+    background-image:url('images/background.png');
+    background-color: black;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+.centered-container {
+    max-width: 1020px;
+    margin: 0px auto;
+    padding: 0px 16px;
+}
+.image-text {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 2.5rem;
+    
+}
+.intro-text {
+    color: gray;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.single-service {
+    text-align: center;
+    margin-bottom: 32px;
+
+}
+.single-service p {
+    padding: 0px 16px;
+    
+}
+@media screen and (min-width: 700px) {
+    /* rules for screen wider than 700 */
+    .nav ul {
+        text-align: right;
+    }
+    .nav ul li {
+        display: inline-block;
+        border-bottom: 0px;
+        border-left: 1px solid white;
+        text-align: left;
+    }
+    .single-service {
+        width: 50%;
+        float: left;
+    }
+}
