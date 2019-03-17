@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #div2 {
+            background-color: #00ff00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="class1" id="div1">Hello World!</div>
+    <button class="class1" id="btn1">Press me</button>
+    <div class="class1" id="div2">
+        <div class="class1" id="div3">Hello World2!</div>
+    </div>
+
+    <!-- js events -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function (event) {
+            //alert('page has been loaded');
+        });
+
+        document.getElementById('div1').addEventListener('mouseover', function (event) {
+            event.target.style.backgroundColor = '#0000ff';
+        })
+
+        var btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', function (event) {
+            console.log(event);
+            console.log(event.target.firstChild.data);
+            //(event.target)
+        });
+        
+
+    </script>
+
+    <!-- <script>
+        // adding html
+        var div1 = document.getElementById('div1');
+        var newDiv = document.createElement('div');
+        newDiv.innerHTML = "Hello created html";
+        //document.body.appendChild(newDiv);
+        div1.appendChild(newDiv);
+        // removing nodes - remove btn
+        document.body.removeChild(document.getElementById('btn1'));
+    </script> -->
+
+    <!-- called **before** styles -->
+    <!-- <script>
+        /******************get attributes*********************/
+        var div2 = document.getElementById('div2');
+        // attribute could be id, class, value..
+        var div1class = div1.getAttribute('class');
+        // retrieving styles - called before style, so it's empty
+        var div2style = div2.style.backgroundColor;
+        //alert(div2style);
+        // to get the style without an onPageLoad event
+        //alert(window.getComputedStyle(div2).backgroundColor);
+
+        /****************set attbributes**********************/
+        div2.setAttribute('class','class2');
+        //alert(div2.getAttribute('class'));
+        div2.innerHTML += "good-bye";
+        // set style attribute
+        div2.style.backgroundColor = '#aaaaff';
+        // over-rides all styles for div2, assigns height
+        // turns green because the <style> above is assigned after this code is executed
+        div2.setAttribute('style','height: 100 px;');
+        // this does both h and bg-c
+        div2.setAttribute('style', 'height: 100 px; background-color: #5555FF');
+
+    </script> -->
+
+    <!-- typically btm of body, but doesn't matter where -->
+    <!-- <script>
+        // method returns an array
+        var class1A = document.getElementsByClassName('class1');
+        //alert(class1A[0].innerHTML)
+
+        var divsA = document.getElementsByTagName('DIV');
+        //alert(divsA[0].innerHTML)
+
+        var btn1 = document.getElementById('btn1');
+        //alert(btn1.innerHTML)
+
+        // NOTE - syntax is '.' before class1
+        var first = document.querySelector('.class1');
+        //alert(first.innerHTML)
+
+        var allA = document.querySelectorAll('.class1');
+        //alert(allA[0].innerHTML);
+        //alert(allA[1].innerHTML);
+
+        var third = document.getElementById('div2');
+        // NOTE - byClassName no '.' before class
+        var inner3rdA = third.getElementsByClassName('class1');
+        //alert(inner3rdA[0].innerHTML);
+    </script> -->
+</body>
+
+</html>
